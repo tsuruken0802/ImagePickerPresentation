@@ -12,5 +12,8 @@ This package is a wrapper class that pick and crop images.
 # Usage
 You can refer to Example Project.
 
+# Install
+Add it in the latest main branch in **Swift Package Manager**.
+
 # Author
 [Tsuruken](https://github.com/TsurumotoKentarou)
