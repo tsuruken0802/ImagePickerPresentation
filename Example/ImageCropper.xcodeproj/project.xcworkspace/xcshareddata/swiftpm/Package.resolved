@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ImagePickerPresentation",
+        "repositoryURL": "git@github.com:tsuruken0802/ImagePickerPresentation.git",
+        "state": {
+          "branch": "main",
+          "revision": "3c91dbe2b8203dc76519848f2cab70af1b92a099",
+          "version": null
+        }
+      },
+      {
+        "package": "TOCropViewController",
+        "repositoryURL": "https://github.com/TimOliver/TOCropViewController.git",
+        "state": {
+          "branch": null,
+          "revision": "d0470491f56e734731bbf77991944c0dfdee3e0e",
+          "version": "2.6.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
