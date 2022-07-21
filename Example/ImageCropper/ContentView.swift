@@ -30,7 +30,7 @@ struct ContentView: View {
                 Button(action: {
                     presentation = .init(presentation: .phpicker(pickedImages: $bindingPhPickerImages, selectionLimit: 1, onDismiss: {
                         guard let image = bindingPhPickerImages.first else { return }
-                        presentation = .init(presentation: .cropper(image: $bindingCroppedImage, originalImage: image, croppingStyle: .default, cropSize: .init(width: 200, height: 200), onDismiss: {
+                        presentation = .init(presentation: .cropper(image: $bindingCroppedImage, originalImage: image, croppingStyle: .default, onDismiss: {
                             images = [ImageData(image: bindingCroppedImage!)]
                         }))
                     }))
@@ -44,7 +44,6 @@ struct ContentView: View {
                         presentation = .init(presentation: .cropper(image: $bindingCroppedImage,
                                                                     originalImage: pickedImage,
                                                                     croppingStyle: .default,
-                                                                    cropSize: .init(width: 200, height: 200),
                                                                     onDismiss: {
                             images = [ImageData(image: bindingCroppedImage!)]
                         }))
