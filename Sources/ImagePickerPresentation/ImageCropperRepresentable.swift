@@ -50,7 +50,7 @@ struct ImageCropperRepresentable: UIViewControllerRepresentable {
         cropController.resetAspectRatioEnabled = false
         cropController.rotateButtonsHidden = true
         // cropBoxのサイズを固定する。
-        cropController.cropView.cropBoxResizeEnabled = false
+        cropController.cropView.cropBoxResizeEnabled = true
         return cropController
     }
     
