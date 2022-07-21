@@ -24,7 +24,7 @@ public struct ImagePickerPresentation: Identifiable {
         case cropper(image: Binding<UIImage?>,
                      originalImage: UIImage,
                      croppingStyle: CropViewCroppingStyle,
-                     cropSize: CGSize,
+                     cropBoxResizeEnabled: Bool = true,
                      onDismiss: () -> Void)
         
         public var body: some View {
@@ -37,12 +37,12 @@ public struct ImagePickerPresentation: Identifiable {
                                                      pickedImages: pickedImages,
                                                      onDismiss: onDismiss))
                 
-            case .cropper(let image, let originalImage, let croppingStyle, let cropSize, let onDismiss):
+            case .cropper(let image, let originalImage, let croppingStyle, let cropBoxResizeEnabled, let onDismiss):
                 return AnyView(ImageCropperRepresentable(circularImage: image,
                                             originalImage: originalImage,
                                             onDismiss: onDismiss,
                                             croppingStyle: croppingStyle,
-                                            cropSize: cropSize))
+                                            cropBoxResizeEnabled: cropBoxResizeEnabled))
             }
         }
     }

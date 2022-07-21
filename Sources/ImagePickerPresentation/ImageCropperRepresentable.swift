@@ -13,7 +13,7 @@ struct ImageCropperRepresentable: UIViewControllerRepresentable {
     let originalImage: UIImage
     let onDismiss: () -> Void
     let croppingStyle: CropViewCroppingStyle
-    let cropSize: CGSize
+    let cropBoxResizeEnabled: Bool
     
     class Coordinator: NSObject, CropViewControllerDelegate {
         let parent: ImageCropperRepresentable
@@ -45,12 +45,10 @@ struct ImageCropperRepresentable: UIViewControllerRepresentable {
         let cropController: CropViewController = .init(croppingStyle: croppingStyle, image: originalImage)
         cropController.delegate = context.coordinator
         
-        cropController.customAspectRatio = cropSize
         cropController.aspectRatioPickerButtonHidden = true
         cropController.resetAspectRatioEnabled = false
         cropController.rotateButtonsHidden = true
-        // cropBoxのサイズを固定する。
-        cropController.cropView.cropBoxResizeEnabled = true
+        cropController.cropView.cropBoxResizeEnabled = cropBoxResizeEnabled
         return cropController
     }
     
