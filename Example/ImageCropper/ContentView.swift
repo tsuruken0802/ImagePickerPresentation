@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ImagePickerPresentation
 
 struct ContentView: View {
     // PHPickerのfullScreenの固有データ

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030A30802888621400807DCA /* ImagePickerPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 030A307F2888621400807DCA /* ImagePickerPresentation */; };
 		0326BB762881563E00542B25 /* ImageCropperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BB752881563E00542B25 /* ImageCropperApp.swift */; };
 		0326BB782881563E00542B25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BB772881563E00542B25 /* ContentView.swift */; };
 		0326BB7A2881563F00542B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0326BB792881563F00542B25 /* Assets.xcassets */; };
@@ -15,6 +14,10 @@
 		0326BB872881563F00542B25 /* ImageCropperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BB862881563F00542B25 /* ImageCropperTests.swift */; };
 		0326BB912881563F00542B25 /* ImageCropperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BB902881563F00542B25 /* ImageCropperUITests.swift */; };
 		0326BB932881563F00542B25 /* ImageCropperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BB922881563F00542B25 /* ImageCropperUITestsLaunchTests.swift */; };
+		0326BBB728816D8900542B25 /* PHPickerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BBB328816D8900542B25 /* PHPickerRepresentable.swift */; };
+		0326BBB828816D8900542B25 /* ImageCropperRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BBB428816D8900542B25 /* ImageCropperRepresentable.swift */; };
+		0326BBB928816D8900542B25 /* ImagePickerPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BBB528816D8900542B25 /* ImagePickerPresentation.swift */; };
+		0326BBBA28816D8900542B25 /* CameraPickerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326BBB628816D8900542B25 /* CameraPickerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,10 @@
 		0326BB8C2881563F00542B25 /* ImageCropperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCropperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0326BB902881563F00542B25 /* ImageCropperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperUITests.swift; sourceTree = "<group>"; };
 		0326BB922881563F00542B25 /* ImageCropperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0326BBB328816D8900542B25 /* PHPickerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPickerRepresentable.swift; sourceTree = "<group>"; };
+		0326BBB428816D8900542B25 /* ImageCropperRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperRepresentable.swift; sourceTree = "<group>"; };
+		0326BBB528816D8900542B25 /* ImagePickerPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerPresentation.swift; sourceTree = "<group>"; };
+		0326BBB628816D8900542B25 /* CameraPickerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPickerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030A30802888621400807DCA /* ImagePickerPresentation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,7 @@
 		0326BB742881563E00542B25 /* ImageCropper */ = {
 			isa = PBXGroup;
 			children = (
+				0326BBB228816D8900542B25 /* ImagePickerPresentation */,
 				0326BB752881563E00542B25 /* ImageCropperApp.swift */,
 				0326BB772881563E00542B25 /* ContentView.swift */,
 				0326BB792881563F00542B25 /* Assets.xcassets */,
@@ -129,6 +136,18 @@
 			path = ImageCropperUITests;
 			sourceTree = "<group>";
 		};
+		0326BBB228816D8900542B25 /* ImagePickerPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				0326BBB328816D8900542B25 /* PHPickerRepresentable.swift */,
+				0326BBB428816D8900542B25 /* ImageCropperRepresentable.swift */,
+				0326BBB528816D8900542B25 /* ImagePickerPresentation.swift */,
+				0326BBB628816D8900542B25 /* CameraPickerRepresentable.swift */,
+			);
+			name = ImagePickerPresentation;
+			path = ../../Sources/ImagePickerPresentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,7 +165,6 @@
 			);
 			name = ImageCropper;
 			packageProductDependencies = (
-				030A307F2888621400807DCA /* ImagePickerPresentation */,
 			);
 			productName = ImageCropper;
 			productReference = 0326BB722881563E00542B25 /* ImageCropper.app */;
@@ -221,7 +239,6 @@
 			);
 			mainGroup = 0326BB692881563E00542B25;
 			packageReferences = (
-				030A307E2888621400807DCA /* XCRemoteSwiftPackageReference "ImagePickerPresentation" */,
 			);
 			productRefGroup = 0326BB732881563E00542B25 /* Products */;
 			projectDirPath = "";
@@ -265,7 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0326BBB828816D8900542B25 /* ImageCropperRepresentable.swift in Sources */,
+				0326BBB728816D8900542B25 /* PHPickerRepresentable.swift in Sources */,
 				0326BB782881563E00542B25 /* ContentView.swift in Sources */,
+				0326BBBA28816D8900542B25 /* CameraPickerRepresentable.swift in Sources */,
+				0326BBB928816D8900542B25 /* ImagePickerPresentation.swift in Sources */,
 				0326BB762881563E00542B25 /* ImageCropperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,25 +622,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		030A307E2888621400807DCA /* XCRemoteSwiftPackageReference "ImagePickerPresentation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:tsuruken0802/ImagePickerPresentation.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		030A307F2888621400807DCA /* ImagePickerPresentation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 030A307E2888621400807DCA /* XCRemoteSwiftPackageReference "ImagePickerPresentation" */;
-			productName = ImagePickerPresentation;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0326BB6A2881563E00542B25 /* Project object */;
 }
