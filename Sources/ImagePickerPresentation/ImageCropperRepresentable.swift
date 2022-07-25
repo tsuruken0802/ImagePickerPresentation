@@ -49,6 +49,7 @@ struct ImageCropperRepresentable: UIViewControllerRepresentable {
         cropController.resetAspectRatioEnabled = false
         cropController.rotateButtonsHidden = false
         cropController.cropView.cropBoxResizeEnabled = cropBoxResizeEnabled
+        cropController.cropView.aspectRatioLockDimensionSwapEnabled = true
         return cropController
     }
     
